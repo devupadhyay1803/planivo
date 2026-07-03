@@ -2,8 +2,8 @@
 import { z } from 'zod';
 
 const envSchema = z.object({
-  VITE_SUPABASE_URL: z.string().url('https://esqwtdlpqhqmoejnlslp.supabase.co'),
-  VITE_SUPABASE_ANON_KEY: z.string().min(1, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVzcXd0ZGxwcWhxbW9lam5sc2xwIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4MzA2NDcwNiwiZXhwIjoyMDk4NjQwNzA2fQ.VgTdgOHNXsR6IxQpXaxwI-CwOHqATs9ASUqkr9AxJKQ'),
+  VITE_SUPABASE_URL: z.string().url('VITE_SUPABASE_URL must be a valid URL'),
+  VITE_SUPABASE_ANON_KEY: z.string().min(1, 'VITE_SUPABASE_ANON_KEY is required'),
 });
 
 // We parse `import.meta.env` which is Vite's way of exposing environment variables.

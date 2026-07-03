@@ -25,10 +25,13 @@ export function AppRouter() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} /> {/* <-- Added this! */}
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-          <Route path="/reset-password" element={<ResetPasswordPage />} />
         </Route>
       </Route>
-
+        {/* Reset Password */}
+    <Route
+        path="/reset-password"
+        element={<ResetPasswordPage />}
+    />
       {/* PROTECTED ROUTES */}
       <Route element={<ProtectedRoute />}>
         <Route element={<DashboardLayout />}>
