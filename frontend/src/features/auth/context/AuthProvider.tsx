@@ -43,13 +43,13 @@ export function AuthProvider({ children }: AuthProviderProps) {
     };
   }, []);
 
-  const signOut = async () => {
-    const { error } = await supabase.auth.signOut();
+  const signOut = async (): Promise<void> => {
+  const { error } = await supabase.auth.signOut();
 
-    if (error) {
-      console.error("Error signing out:", error.message);
-    }
-  };
+  if (error) {
+    throw error;
+  }
+};
 
   const value: AuthContextType = {
     user,
